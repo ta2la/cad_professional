@@ -1,0 +1,6 @@
+*
+!*.cpp
+!*.h
+!cad_professional.pro
+!.gitignore
+
