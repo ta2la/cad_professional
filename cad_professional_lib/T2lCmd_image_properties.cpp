@@ -65,6 +65,7 @@ void Cmd_image_properties::enterPoint( const Point2F& pt, T2l::Display& view )
         CadObject_image* cadImage = dynamic_cast<CadObject_image*>(selected.get(0)->object());
         if (cadImage != nullptr) {
             cadImage->setTransparency(ATTR_SETTINGS_TRANSP.get());
+            cadImage->setColorize(ATTR_SETTINGS_COLOR_USE.get(), ATTR_SETTINGS_COLOR.get());
             registerFileChange();
             selected.unselectAll();
         }
@@ -100,6 +101,17 @@ QString Cmd_image_properties::dialogTml() const
     QString result;
 
     result += QString::fromStdString(CadAttr_dialogs::editor_transparency());
+
+    result += "TC;CT;text: <hup>;;";
+    if (! ATTR_SETTINGS_COLOR_USE.get()) {
+        result += "TC;CB;text: colorize not used;cmd: cad_set_color_use;;";
+    }
+    else {
+        result += "TC;CT;text: colorize:;;TC;CT;text:<space>;;";
+        result += QString::fromStdString(CadAttr_dialogs::editor_color(""));
+        result += "TC;CT;text: <space>;;";
+        result += "TC;CB;text: not use;cmd: cad_set_color_use;;";
+    }
 
     //===================================================
     result = result.replace("TC", "type: control");
