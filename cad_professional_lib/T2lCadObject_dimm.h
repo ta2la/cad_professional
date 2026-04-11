@@ -45,6 +45,7 @@ public:
     void sizeSet(double size) { size_ = size; }
 //===================================================================
 //<OVERRIDES>
+    bool isOfType(FilterCadObject::ECadObjectType type) override { return type == FilterCadObject::ECO_DIMM; }
     virtual void display(EntityList& list, RefCol* scene);
     virtual bool loadFromStored(StoredItem* item, GFile* file);
     virtual void saveToStored(StoredItem& item, GFile* file);

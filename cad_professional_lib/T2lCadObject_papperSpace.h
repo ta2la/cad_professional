@@ -55,6 +55,7 @@ public:
     static std::string   targetsToString(const Targets& targets);
 //===================================================================
 //<OVERRIDES>
+    bool                 isOfType(FilterCadObject::ECadObjectType type) override { return type == FilterCadObject::ECO_PAPPER; }
     void                 display(EntityList& list, RefCol* scene) override;
     bool                 loadFromStored(StoredItem* item, GFile* file) override;
     void                 saveToStored(StoredItem& item, GFile* file) override;
