@@ -171,7 +171,7 @@ QString Cmd_draw_dimm::dialogTml() const
 
     //<STEP> force angle
     result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_angle_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_angle_use.png;";
     result += "cmd: cad_set_draw_angle_use ";
     result += CAD_SETTINGS_PARAMS.drawAngleUse().get() ? "false;;":"true;;";
     if (CAD_SETTINGS_PARAMS.drawAngleUse().get()) {

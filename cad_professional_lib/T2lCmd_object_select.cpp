@@ -173,19 +173,19 @@ QString Cmd_object_select::dialogTml() const
     // mode icons -----------------------------------------
     result += "TC;CB;icon: ";
     if (CAD_SETTINGS.selectMode() == CadSettings::SEL_RECT) {
-        result += dir.path() + "/resource/icons/cad_set_select_mode_rectangle.png;";
+        result += "qrc:/cad_icons/resource/icons/cad_set_select_mode_rectangle.png;";
     }
     else {
-        result += dir.path() + "/resource/icons/cad_set_select_mode_single.png;";
+        result += "qrc:/cad_icons/resource/icons/cad_set_select_mode_single.png;";
     }
     result += "cmd: cad_set_select_mode;;";
 
     result += "TC;CB;icon: ";
     if (CAD_SETTINGS.unselectMode()) {
-        result += dir.path() + "/resource/icons/cad_set_unselect_mode_unselect.png;";
+        result += "qrc:/cad_icons/resource/icons/cad_set_unselect_mode_unselect.png;";
     }
     else {
-        result += dir.path() + "/resource/icons/cad_set_unselect_mode_select.png;";
+        result += "qrc:/cad_icons/resource/icons/cad_set_unselect_mode_select.png;";
     }
     result += "cmd: cad_set_unselect_mode;;";
 
@@ -193,7 +193,7 @@ QString Cmd_object_select::dialogTml() const
     result += "TC;CT;text: <hup>;;";
     result += "TC;CT;text: unselect all:;;";
     result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_unselect_all.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_unselect_all.png;";
     result += "cmd: cad_unselect_all;;";
 
     //=====================================================

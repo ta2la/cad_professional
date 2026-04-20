@@ -221,7 +221,7 @@ QString Cmd_draw_linePro::dialogTml() const
     QString result;
 
     /*result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_length_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_length_use.png;";
     result += "cmd: cad_set_draw_length_use ";
     result += CAD_SETTINGS_PARAMS.drawLengthUse().get() ? "false;;":"true;;";
 
@@ -236,7 +236,7 @@ QString Cmd_draw_linePro::dialogTml() const
     //===================================================
     // force length
     result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_length_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_length_use.png;";
     result += "cmd: cad_set_draw_length_use ";
     result += CAD_SETTINGS_PARAMS.drawLengthUse().get() ? "false;;":"true;;";
     if (CAD_SETTINGS_PARAMS.drawLengthUse().get()) {
@@ -248,7 +248,7 @@ QString Cmd_draw_linePro::dialogTml() const
 
     // force angle
     result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_angle_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_angle_use.png;";
     result += "cmd: cad_set_draw_angle_use ";
     result += CAD_SETTINGS_PARAMS.drawAngleUse().get()? "false;;":"true;;";
     if (CAD_SETTINGS_PARAMS.drawAngleUse().get()) {

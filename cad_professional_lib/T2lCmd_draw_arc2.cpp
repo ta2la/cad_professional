@@ -183,7 +183,7 @@ QString Cmd_draw_arc2::dialogTml() const
     //===================================================
     // force length
     /*result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_length_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_length_use.png;";
     result += "cmd: cad_set_draw_length_use;;";
     if (CAD_SETTINGS.draw_length_use()) {
         result += "TC;control: edit;";
@@ -194,7 +194,7 @@ QString Cmd_draw_arc2::dialogTml() const
 
     // force angle
     /*result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_angle_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_angle_use.png;";
     result += "cmd: cad_set_draw_angle_use;;";
     if (CAD_SETTINGS.draw_angle_use()) {
         result += "TC;control: edit;";

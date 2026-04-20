@@ -196,7 +196,7 @@ QString Cmd_object_movePoints::dialogTml() const
     //===================================================
     // force length
     result += "TC;CB;icon: ";
-    result += dir.path() + "/resource/icons/cad_set_draw_length_use.png;";
+    result += "qrc:/cad_icons/resource/icons/cad_set_draw_length_use.png;";
     result += "cmd: cad_set_fence_size_use;;";
     if (CAD_SETTINGS.fence_size_use()) {
         result += "TC;control: edit;";
