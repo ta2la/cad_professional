@@ -1,2 +1,7 @@
+# repo-visibility: public
+# CLAUDE.md not tracked here — private content (lives only in private repos)
 *
 !/cad_professional_lib
+
+# CLAUDE*.md never tracked here — risk of accidental secrets/access notes; lives only in the CLAUDE repo
+CLAUDE*.md
